@@ -7,7 +7,7 @@ export default defineConfig({
   name: 'default',
   title: 'photographysanity',
 
-  projectId: 'xei8fe9p',
+  projectId: '61kqz5hg',
   dataset: 'production',
 
   plugins: [structureTool(), visionTool()],
