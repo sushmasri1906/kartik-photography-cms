@@ -1,6 +1,7 @@
+// schemas/galleryAlbum.ts
 export default {
-  name: 'gallery',
-  title: 'Gallery',
+  name: 'galleryAlbum',
+  title: 'Gallery Album',
   type: 'document',
   fields: [
     {name: 'title', title: 'Gallery Title', type: 'string'},
@@ -12,7 +13,7 @@ export default {
     },
     {
       name: 'category',
-      title: 'Photo Category',
+      title: 'Category',
       type: 'reference',
       to: [{type: 'photoCategory'}],
     },
@@ -21,11 +22,13 @@ export default {
       title: 'Gallery Images',
       type: 'array',
       of: [{type: 'image', options: {hotspot: true}}],
+      validation: (Rule: any) => Rule.required().min(1).error('At least one image is required.'),
     },
     {
-      name: 'isFeatured',
-      title: 'Use First 3 Images as Hero Carousel',
-      type: 'boolean',
+      name: 'createdAt',
+      title: 'Created At',
+      type: 'datetime',
+      initialValue: () => new Date().toISOString(),
     },
   ],
 }
