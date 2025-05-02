@@ -1,5 +1,5 @@
 import gallery from './gallery'
-import photo from './photo'
 import photoCategory from './photoCategory'
+import featuredPhotos from './featuredPhotos'
 
-export const schemaTypes = [photo, photoCategory, gallery]
+export const schemaTypes = [featuredPhotos, photoCategory, gallery]

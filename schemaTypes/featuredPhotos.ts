@@ -1,6 +1,6 @@
 export default {
-  name: 'carouselPhoto',
-  title: 'Carousel Photo',
+  name: 'featuredPhotos',
+  title: 'Featured Photos',
   type: 'document',
   fields: [
     {
