@@ -1,4 +1,3 @@
-// schemas/galleryAlbum.ts
 export default {
   name: 'galleryAlbum',
   title: 'Gallery Album',
